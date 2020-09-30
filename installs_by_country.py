@@ -131,15 +131,17 @@ def report_geo_google_sheets(app_name, app_id, date_from, date_to):
                row_names=True)
 
 # Using function
+date_from = '2020-01-01'
+date_to = '2020-08-31'
 # Tuner
-report_geo_google_sheets('Tuner_One', 'id1435060008', '2020-01-01', '2020-08-31')
-report_geo_google_sheets('Tuner_guitar_ukulele_bass', 'id1507738194', '2020-01-01', '2020-08-31')
-report_geo_google_sheets('Tuner_Pro', 'id1509460145', '2020-01-01', '2020-08-31')
-report_geo_google_sheets('Tuner_ONE_PRO', 'id1479411134', '2020-01-01', '2020-08-31')
+report_geo_google_sheets('Tuner_One', 'id1435060008', date_from, date_to)
+report_geo_google_sheets('Tuner_guitar_ukulele_bass', 'id1507738194', date_from, date_to)
+report_geo_google_sheets('Tuner_Pro', 'id1509460145', date_from, date_to)
+report_geo_google_sheets('Tuner_ONE_PRO', 'id1479411134', date_from, date_to)
 # Metronome
-report_geo_google_sheets('Metronome_One', 'id1428578368', '2020-01-01', '2020-08-31')
-report_geo_google_sheets('Metronome PRO', 'id1509276291', '2020-01-01', '2020-08-31')
+report_geo_google_sheets('Metronome_One', 'id1428578368', date_from, date_to)
+report_geo_google_sheets('Metronome PRO', 'id1509276291', date_from, date_to)
 # Dj
-report_geo_google_sheets('DJ_One', 'id1514562131', '2020-01-01', '2020-08-31')
+report_geo_google_sheets('DJ_One', 'id1514562131', date_from, date_to)
 # Translator
-report_geo_google_sheets('Translator_One', 'id1498930242', '2020-01-01', '2020-08-31')
+report_geo_google_sheets('Translator_One', 'id1498930242', date_from, date_to)
