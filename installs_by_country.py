@@ -16,7 +16,7 @@ from oauth2client.service_account import ServiceAccountCredentials
 
 
 # write func
-def report_geo_google_sheets(app_name, app_id):
+def report_geo_google_sheets(app_name, app_id, date_from, date_to):
     ##app_name = 'Metronome_One' # exmple app_name
     ##app_id = 'id1428578368' #example app_id
 
@@ -28,8 +28,8 @@ def report_geo_google_sheets(app_name, app_id):
 
     params = {
         'api_token': token['token'],
-        'from': '2020-01-01', # date start
-        'to': '2020-08-31' # date end
+        'from': date_from, # date start 2020-01-01
+        'to': date_to # date end 2020-08-31
     }
     # url api appsflyer
     request_url = 'https://hq.appsflyer.com/export/{}/{}/v5'.format(app_id, report_type)
@@ -132,14 +132,14 @@ def report_geo_google_sheets(app_name, app_id):
 
 # Using function
 # Tuner
-report_geo_google_sheets('Tuner_One', 'id1435060008')
-report_geo_google_sheets('Tuner_guitar_ukulele_bass', 'id1507738194')
-report_geo_google_sheets('Tuner_Pro', 'id1509460145')
-report_geo_google_sheets('Tuner_ONE_PRO', 'id1479411134')
+report_geo_google_sheets('Tuner_One', 'id1435060008', '2020-01-01', '2020-08-31')
+report_geo_google_sheets('Tuner_guitar_ukulele_bass', 'id1507738194', '2020-01-01', '2020-08-31')
+report_geo_google_sheets('Tuner_Pro', 'id1509460145', '2020-01-01', '2020-08-31')
+report_geo_google_sheets('Tuner_ONE_PRO', 'id1479411134', '2020-01-01', '2020-08-31')
 # Metronome
-report_geo_google_sheets('Metronome_One', 'id1428578368')
-report_geo_google_sheets('Metronome PRO', 'id1509276291')
+report_geo_google_sheets('Metronome_One', 'id1428578368', '2020-01-01', '2020-08-31')
+report_geo_google_sheets('Metronome PRO', 'id1509276291', '2020-01-01', '2020-08-31')
 # Dj
-report_geo_google_sheets('DJ_One', 'id1514562131')
+report_geo_google_sheets('DJ_One', 'id1514562131', '2020-01-01', '2020-08-31')
 # Translator
-report_geo_google_sheets('Translator_One', 'id1498930242')
+report_geo_google_sheets('Translator_One', 'id1498930242', '2020-01-01', '2020-08-31')
